@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [HeyzapAds startWithPublisherID:@"2ea72a86563b102fcac0c11cebbf2fd7"];
+    [HeyzapAds startWithPublisherID:@"7b162b3f5f5a527f26eed72406b3212f"];
     [HeyzapAds presentMediationDebugViewController];
     return YES;
 }
