@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <HeyzapAds/HeyzapAds.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [HeyzapAds startWithPublisherID:@"2ea72a86563b102fcac0c11cebbf2fd7"];
+    [HeyzapAds presentMediationDebugViewController];
     return YES;
 }
 
