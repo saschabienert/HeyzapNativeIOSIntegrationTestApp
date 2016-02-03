@@ -1,0 +1,16 @@
+PODS:
+  - FBAudienceNetwork (4.6.0)
+  - Google-Mobile-Ads-SDK (7.6.0)
+  - Heyzap (9.3.7)
+
+DEPENDENCIES:
+  - FBAudienceNetwork (~> 4.6.0)
+  - Google-Mobile-Ads-SDK (~> 7.0)
+  - Heyzap (~> 9.0)
+
+SPEC CHECKSUMS:
+  FBAudienceNetwork: a1bcfb9eb2fecfc5c2caa6e5cfd3331aa5ddda08
+  Google-Mobile-Ads-SDK: 0290020329c61183c4685304264b73382bc49fb4
+  Heyzap: 7b37123e410b2be05ba4d08264b201b1574bccf5
+
+COCOAPODS: 0.39.0
