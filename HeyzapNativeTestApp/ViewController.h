@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIView *bannerContainerView;
 
 @end
 
