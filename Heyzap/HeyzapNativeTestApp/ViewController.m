@@ -67,7 +67,7 @@
                                  success:^(HZBannerAd *banner) {
                                      [self releaseBanner];
                                      self.banner = banner;
-                                     [self.bannerContainerView addSubview:banner];
+                                     [self.bannerContainerView addSubview:self.banner];
                                  }
                                  failure:^(NSError *error) {
                                      NSLog(@"Error = %@",error);

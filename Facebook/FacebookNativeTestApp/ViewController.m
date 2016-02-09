@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+@import FBAudienceNetwork;
 
 @interface ViewController ()
+
+@property (weak, nonatomic) FBAdView *banner;
 
 @end
 
@@ -16,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.bannerContainerView setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -23,27 +28,32 @@
     [self releaseBanner];
 }
 
-- (IBAction)startSDK:(id)sender {
+- (IBAction)loadBanner:(id)sender {
+        FBAdView *adView = [[FBAdView alloc] initWithPlacementID:@"660126697415740_973155002779573"
+                                                          adSize:kFBAdSizeHeight50Banner
+                                              rootViewController:self];
+        [adView loadAd];
+
+        [self releaseBanner];
+        self.banner = adView;
+        [self.bannerContainerView addSubview:self.banner];
 }
 
-- (IBAction)showBannerOnTop:(id)sender {
+- (IBAction)showBanner:(id)sender {
+    [self.bannerContainerView setHidden:NO];
 }
 
-- (IBAction)showBannerOnBottom:(id)sender {
-}
-
-- (IBAction)showBannerInCustomView:(id)sender {
-    [self getBanner];
+- (IBAction)hideBanner:(id)sender {
+    [self.bannerContainerView setHidden:YES];
 }
 
 - (IBAction)destroyBanner:(id)sender {
     [self releaseBanner];
 }
 
-- (void)getBanner {
-}
-
 - (void)releaseBanner {
+    [self.banner removeFromSuperview];
+    self.banner = nil;
 }
 
 @end
