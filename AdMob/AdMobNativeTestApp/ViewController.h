@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UIView *bannerContainerView;
+@property (weak, nonatomic) IBOutlet UIPickerView *sizePicker;
 
 @end
 
