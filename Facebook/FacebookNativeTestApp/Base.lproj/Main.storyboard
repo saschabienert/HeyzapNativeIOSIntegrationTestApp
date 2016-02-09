@@ -21,29 +21,38 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9lU-3z-Bqz">
+                                <rect key="frame" x="0.0" y="249" width="600" height="29"/>
+                                <segments>
+                                    <segment title="Height50"/>
+                                    <segment title="Height90"/>
+                                    <segment title="Rect250"/>
+                                    <segment title="Interstitial"/>
+                                </segments>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fho-Q5-09X">
-                                <rect key="frame" x="0.0" y="220" width="600" height="30"/>
+                                <rect key="frame" x="0.0" y="285" width="600" height="30"/>
                                 <state key="normal" title="Load Banner"/>
                                 <connections>
                                     <action selector="loadBanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Tf-5H-ZJG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y22-UF-8NW">
-                                <rect key="frame" x="0.0" y="258" width="600" height="30"/>
-                                <state key="normal" title="Show Banner"/>
+                                <rect key="frame" x="0.0" y="323" width="600" height="30"/>
+                                <state key="normal" title="Show Banner View"/>
                                 <connections>
                                     <action selector="showBanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZhM-6y-8Nq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxL-gQ-DDZ">
-                                <rect key="frame" x="0.0" y="296" width="600" height="30"/>
-                                <state key="normal" title="Hide Banner"/>
+                                <rect key="frame" x="0.0" y="361" width="600" height="30"/>
+                                <state key="normal" title="Hide Banner View"/>
                                 <connections>
                                     <action selector="hideBanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6r-Pv-gib"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xz-mV-SVt">
-                                <rect key="frame" x="0.0" y="334" width="600" height="30"/>
+                                <rect key="frame" x="0.0" y="399" width="600" height="30"/>
                                 <state key="normal" title="Destroy Banner"/>
                                 <connections>
                                     <action selector="destroyBanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P01-Af-o5T"/>
@@ -54,17 +63,20 @@
                         <constraints>
                             <constraint firstItem="fho-Q5-09X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0lq-G5-Jco"/>
                             <constraint firstItem="Y22-UF-8NW" firstAttribute="top" secondItem="fho-Q5-09X" secondAttribute="bottom" constant="8" id="2qI-By-fdm"/>
+                            <constraint firstItem="9lU-3z-Bqz" firstAttribute="bottom" secondItem="fho-Q5-09X" secondAttribute="top" constant="-8" id="3Hh-yi-QVA"/>
                             <constraint firstItem="kon-WX-56q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6nr-4V-nm8"/>
                             <constraint firstItem="5Xz-mV-SVt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8Z8-tC-sbT"/>
                             <constraint firstItem="kon-WX-56q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="C8h-bJ-kze"/>
                             <constraint firstItem="mxL-gQ-DDZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="J4n-6h-aeV"/>
                             <constraint firstItem="fho-Q5-09X" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LXZ-2e-cET"/>
                             <constraint firstItem="kon-WX-56q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZO-JS-9du"/>
-                            <constraint firstItem="fho-Q5-09X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="OF3-Wh-e99"/>
                             <constraint firstItem="mxL-gQ-DDZ" firstAttribute="top" secondItem="Y22-UF-8NW" secondAttribute="bottom" constant="8" id="P1B-04-CXq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kon-WX-56q" secondAttribute="bottom" id="Xv2-oA-zhQ"/>
+                            <constraint firstItem="fho-Q5-09X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YvF-ua-W08"/>
+                            <constraint firstItem="9lU-3z-Bqz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cT9-ap-ocJ"/>
                             <constraint firstItem="5Xz-mV-SVt" firstAttribute="top" secondItem="mxL-gQ-DDZ" secondAttribute="bottom" constant="8" id="mea-iN-W1M"/>
                             <constraint firstItem="mxL-gQ-DDZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pd6-3I-2l4"/>
+                            <constraint firstItem="9lU-3z-Bqz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pku-x2-8eq"/>
                             <constraint firstItem="Y22-UF-8NW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vr6-T5-HHK"/>
                             <constraint firstItem="5Xz-mV-SVt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w4N-ZR-X0t"/>
                             <constraint firstItem="Y22-UF-8NW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yJm-ZS-tJf"/>
@@ -72,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="bannerContainerView" destination="kon-WX-56q" id="XPf-N4-Si1"/>
+                        <outlet property="sizeControl" destination="9lU-3z-Bqz" id="MVj-l8-xYC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

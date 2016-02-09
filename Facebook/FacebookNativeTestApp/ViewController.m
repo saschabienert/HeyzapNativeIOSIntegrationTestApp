@@ -28,8 +28,25 @@
 }
 
 - (IBAction)loadBanner:(id)sender {
+    FBAdSize size;
+    switch (self.sizeControl.selectedSegmentIndex) {
+        case 3:
+            size = kFBAdSizeInterstital;
+            break;
+        case 2:
+            size = kFBAdSizeHeight250Rectangle;
+            break;
+        case 1:
+            size = kFBAdSizeHeight90Banner;
+            break;
+
+        default:
+            size = kFBAdSizeHeight50Banner;
+            break;
+    }
+
     FBAdView *adView = [[FBAdView alloc] initWithPlacementID:@"660126697415740_973155002779573"
-                                                      adSize:kFBAdSizeHeight50Banner
+                                                      adSize:size
                                           rootViewController:self];
     [adView setDelegate:self];
     [adView loadAd];
