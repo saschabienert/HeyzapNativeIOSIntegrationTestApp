@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [HeyzapAds setDebugLevel:HZDebugLevelVerbose];
+    [HeyzapAds setBundleIdentifier:@"com.sponsorpay.SponsorPaySample"];
     return YES;
 }
 
